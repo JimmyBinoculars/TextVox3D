@@ -13,10 +13,23 @@ exports.mesh = class mesh {
         this.faces = faces;
     }
 }
-exports.object = class object {
+exports.item = class item {
 	constructor(mesh, pos, rot) {
 		this.mesh = mesh;
         this.pos = pos;
         this.rot = rot;
+	}
+};
+exports.camera = class camera {
+	constructor(fl, pos, rot) {
+		this.fl = fl;
+        this.pos = pos;
+        this.rot = rot;
+	}
+};
+exports.viewport = class viewport {
+	constructor(width, height) {
+		this.width = width;
+        this.height = height;
 	}
 };

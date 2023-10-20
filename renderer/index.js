@@ -1,6 +1,6 @@
 const lib = require("render_mod");
 
-let cube = new lib.object("cube", [0,0,0]/*pos*/, [0,0,0]/*rot*/, [2, 2, 2]/*scale*/);
+let cube = new lib.item("cube", [0,0,0]/*pos*/, [0,0,0]/*rot*/, [2, 2, 2]/*scale*/);
 let fn = 0;
 let camera = {"fl":55, "pos":[7,-7,5], "rot":[64,0,47]};
 let viewport = {"width":process.stdout.columns, "height":process.stdout.rows-1};
