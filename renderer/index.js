@@ -1,9 +1,9 @@
-const lib = require("render_mod");
+const lib = require("text-renderer");
 
 let cube = new lib.item("cube", [0,0,0]/*pos*/, [0,0,0]/*rot*/, [2, 2, 2]/*scale*/);
 let fn = 0;
-let camera = {"fl":55, "pos":[7,-7,5], "rot":[64,0,47]};
-let viewport = {"width":process.stdout.columns, "height":process.stdout.rows-1};
+let camera = new lib.camera(55, [7,-7,5], [64,0,47]);
+let viewport = new lib.viewport(process.stdout.columns, process.stdout.rows-1);
 
 //console.log(`Columns: ${process.stdout.columns}, Rows: ${process.stdout.rows}`);
 
