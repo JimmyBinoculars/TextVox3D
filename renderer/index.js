@@ -1,9 +1,24 @@
 const lib = require("text-renderer");
 
-let cube = new lib.item("cube", [0,0,0]/*pos*/, [0,0,0]/*rot*/, [2, 2, 2]/*scale*/);
+function calculateViewportWidth(camera, d) {
+	const focalLength = camera.fl;
+	const viewportHeight = camera.viewportHeight;
+  
+	// Calculate the width of the viewport
+	const viewportWidth = (viewportHeight * d) / focalLength;
+  
+	return viewportWidth;
+}
+
 let fn = 0;
 let camera = new lib.camera(55, [7,-7,5], [64,0,47]);
 let viewport = new lib.viewport(process.stdout.columns, process.stdout.rows-1);
+
+let cube = new lib.item("cube", [0,0,0]/*pos*/, [0,0,0]/*rot*/, [2, 2, 2]/*scale*/);
+
+//Whole screen width is focal length in meters
+//Pixel size is 
+let pixelSize = 50;
 
 //console.log(`Columns: ${process.stdout.columns}, Rows: ${process.stdout.rows}`);
 
@@ -25,4 +40,7 @@ function frame() {
 	fn++;
 }
 
-setInterval(frame, 50)
+console.log(`Here is the viewport width of the viewport at the cube: ${calculateViewportWidth(camera.fl, 11)}`)
+
+//frame();
+//setInterval(frame, 50)

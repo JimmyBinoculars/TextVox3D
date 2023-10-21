@@ -21,8 +21,9 @@ exports.item = class item {
 	}
 };
 exports.camera = class camera {
-	constructor(fl, pos, rot) {
+	constructor(fl, viewPortHeight, pos, rot) {
 		this.fl = fl;
+        this.viewportHeight = viewportHeight;
         this.pos = pos;
         this.rot = rot;
 	}
