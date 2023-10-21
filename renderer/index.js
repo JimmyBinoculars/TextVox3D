@@ -10,7 +10,7 @@ function calculateViewportWidth(camera, d) {
 	return viewportWidth;
 }
 
-let fn = 0;
+let f = 0;
 let camera = new lib.camera(55, [7,-7,5], [64,0,47]);
 let viewport = new lib.viewport(process.stdout.columns, process.stdout.rows-1);
 
@@ -26,8 +26,8 @@ function viewportTest() {
 	let i=0;
 	while (i<viewport.height) {
 		if (i==0){
-			let a = lib.repeatStringNumTimes("0", (viewport.width-(fn.toString().length + 2)));
-			console.log(`${a}f=${fn}`);
+			let a = lib.repeatStringNumTimes("0", (viewport.width-(f.toString().length + 2)));
+			console.log(`${a}f=${f}`);
 		}else {
 			console.log("0");
 		}
