@@ -1,23 +1,24 @@
 {
   "name": "textvox3d",
-  "version": "1.0.7",
-  "description": "A rendering module for making 3d renders with text",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">     <p>         <img alt=\"Logo\" src=\"./data/logo.png\" />     </p>     <p>         <img alt=\"Language\" src=\"https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript\" />         <img alt=\"Version\" src=\"https://img.shields.io/npm/v/text-renderer.svg?style=for-the-badge&logo=npm\" />         <img alt=\"GitHub Workflow Status\" src=\"https://img.shields.io/github/actions/workflow/status/JimmyBinoculars/TextVox3D/node.js.yml?style=for-the-badge&logo=github\" />         <img alt=\"Downloads\" src=\"https://img.shields.io/npm/dt/text-renderer.svg?style=for-the-badge&logo=npm\" />     </p> </div>",
   "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  },
-  "keywords": [
-    "renderer"
-  ],
-  "author": "JimmyBinoculars",
-  "license": "ISC",
   "directories": {
     "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JimmyBinoculars/TextVox3D.git"
   },
+  "keywords": [
+    "renderer",
+    "3d"
+  ],
+  "author": "JimmyBinoculars",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/JimmyBinoculars/TextVox3D/issues"
   },
