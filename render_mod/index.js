@@ -34,3 +34,9 @@ exports.viewport = class viewport {
         this.height = height;
 	}
 };
+exports.getMesh = function getMesh(meshName) {
+    switch(meshName) {
+        case "cube" :
+            return {"points":[[1,1,1], [-1,1,1], [-1,-1,1], [1,-1,1], [1,-1,-1], [1,1,-1], [-1,-1,-1], [-1,1,-1]], "edges":[[0,1], [0,5], [0,3], [1,2], [1,7], [2,3], [2,6], [3,4], [4,5], [4,6], [5,7], [7,6]]};
+    }
+}

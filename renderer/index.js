@@ -12,8 +12,9 @@ let f = 0;
 let camera = new lib.camera(55, 10, [7,-7,5], [64,0,47]);
 let viewport = new lib.viewport(process.stdout.columns, process.stdout.rows-1);
 
-let cubeMesh = new lib.mesh([[1,1,1], [-1,1,1], [-1,-1,1], [1,-1,1], [1,-1,-1], [1,1,-1], [-1,-1,-1], [-1,1,-1]], [1,]);
+let cubeMesh = lib.getMesh("cube");
 let cube = new lib.item(cubeMesh, [0,0,0]/*pos*/, [0,0,0]/*rot*/, [2, 2, 2]/*scale*/);
+//console.log(`Cube mesh: points: ${cubeMesh.points}, edges: ${cubeMesh.edges}`);
 
 //console.log(`Columns: ${process.stdout.columns}, Rows: ${process.stdout.rows}`);
 
@@ -34,8 +35,6 @@ function frame() {
 	viewportTest();
 	fn++;
 }
-
-console.log(`Here is the viewport width at the cube: ${calculateViewportWidth(camera, 11)}`)
 
 //frame();
 //setInterval(frame, 50)

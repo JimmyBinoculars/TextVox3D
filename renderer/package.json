@@ -9,6 +9,6 @@
   "author": "JimmyBinoculars",
   "license": "ISC",
   "dependencies": {
-    "text-renderer": "^1.0.4"
+    "text-renderer": "^1.0.7"
   }
 }
