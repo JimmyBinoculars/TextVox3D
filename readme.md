@@ -1,4 +1,3 @@
-# TextVox3D
 <div align="center">
     <p>
         <img alt="Logo" src="./data/logo.png" />
