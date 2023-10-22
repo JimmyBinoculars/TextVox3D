@@ -1,5 +1,5 @@
 {
-  "name": "text-renderer",
+  "name": "textvox3d",
   "version": "1.0.7",
   "description": "A rendering module for making 3d renders with text",
   "main": "index.js",
