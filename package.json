@@ -10,5 +10,16 @@
     "renderer"
   ],
   "author": "JimmyBinoculars",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmyBinoculars/TextVox3D.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JimmyBinoculars/TextVox3D/issues"
+  },
+  "homepage": "https://github.com/JimmyBinoculars/TextVox3D#readme"
 }
