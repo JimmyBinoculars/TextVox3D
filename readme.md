@@ -11,6 +11,8 @@
         <a href="https://github.com/JimmyBinoculars/TextVox3D/actions/workflows/node.js.yml"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/JimmyBinoculars/TextVox3D/node.js.yml?style=for-the-badge&logo=github" /></a>
         <a href="https://codecov.io/gh/JimmyBinoculars/TextVox3D" ><img src="https://img.shields.io/codecov/c/github/JimmyBinoculars/TextVox3D?style=for-the-badge&logo=codecov" alt="Code coverage" /></a>
         <a href="https://www.npmjs.com/package/textvox3d"><img alt="Downloads" src="https://img.shields.io/npm/dt/textvox3d.svg?style=for-the-badge&logo=npm" /></a>
+        <a href="https://github.com/JimmyBinoculars/TextVox3D/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/JimmyBinoculars/TextVox3D?style=for-the-badge"></a>
+        <a href="https://github.com/JimmyBinoculars/TextVox3D/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/JimmyBinoculars/TextVox3D?style=for-the-badge"></a>
     </p>
 </div>
 
