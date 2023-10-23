@@ -1,7 +1,7 @@
 const lib = require("./index");
 
 test("Camera", () => {
-  expect(new lib.camera(55, 10, [7,-7,5], [64,0,47])).toEqual({"fl":55, "viewportHeight":10, "pos": [7,-7,5], "rot":[64,0,47]});
+  expect(new lib.camera(70, 10, [7,-7,5], [64,0,47])).toEqual({"fov":70, "samples":10, "pos": [7,-7,5], "rot":[64,0,47]});
 });
 test("Mesh", () => {
     expect(new lib.mesh([1,1,1], [1,1,1], [1,1,1])).toEqual({"points":[1,1,1], "edges":[1,1,1], "faces":[1,1,1]})
