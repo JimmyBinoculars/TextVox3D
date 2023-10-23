@@ -26,11 +26,8 @@ function isPointInPolygon(point, polygon) {
     return isInside;
 };*/
 
-function isPointInPolygon(point, polygon) {
-    const x = point[0];
-    const y = point[1];
-
-    if (x<=polygon[0][0] && x<=polygon[1][0] && y>=[0][1] && y<=[1][1]) {
+function isPointInPolygon(x, y, polygon) {
+    if (x >= polygon[0][0] && x <= polygon[1][0] && y >= polygon[0][1] && y <= polygon[2][1]) {
         return true;
     }else {
         return false;
@@ -42,21 +39,30 @@ let y = 0;
 let maxDistance = 10;
 let viewport = {"height":process.stdout.rows-1, "width":process.stdout.columns};
 console.log(viewport);
-let castAngle = -70;
+let castAngle = 0;
 let column = 0;
+let columnHits = [];
 while(castAngle<=degrees) {
     castAngle = ((viewport.width/(140))*column)-70;
     let castTang = Math.tan(castAngle*(Math.PI/180));
-    console.log(`Cast angle: ${castAngle}`);
+    //console.log(`Cast angle: ${castAngle}, tang: ${castTang}`);
     while(y<maxDistance){
         y += 0.01;
         let x = castTang*y;
-        if(isPointInPolygon([x,y], square) == true) {
-            console.log(`Found object at (x=${x}, y=${y})`)
-        };
-        //console.log(`Coordinates: (x=${x}, y=${y})`);
-        //console.log(`Degrees: ${castAngle}`);
+        if(isPointInPolygon(x, y, square)){
+            y=maxDistance+1000;
+            columnHits += column;
+        }
     };
     y=0;
     column++;
 };
+let output = "";
+for(i=0;i<=(viewport.width-1);i++){
+    if(columnHits.includes(i)){
+        output += "#";
+    }else {
+        output += ".";
+    }
+}
+console.log(output);
