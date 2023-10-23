@@ -17,4 +17,4 @@
 A JavaScript 3D renderer for rendering to text outputted to a command prompt or terminal.
 
 ## Contributing
-Currently I will not be accepting contribution apart from on issued marked "help wanted"
+As the project is in such an early stage, currently I will not be accepting contribution apart from on issued marked "help wanted"
