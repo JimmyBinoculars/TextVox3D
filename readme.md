@@ -2,8 +2,8 @@
     <p>
         <img alt="Logo" src="./data/logo.png" />
     </p>
+    <code>npm i textvox3d</code>
     <p>
-        <code>npm i textvox3d</code>
         <img alt="Language" src="https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript&labelColor=grey&color=%23F7DF1E" />
         <img alt="node.js" src="https://img.shields.io/badge/node.js-grey?style=for-the-badge&logo=nodedotjs&labelColor=grey&color=%23339933" />
         <a href="https://www.npmjs.com/package/textvox3d"><img alt="Version" src="https://img.shields.io/npm/v/textvox3d.svg?style=for-the-badge&logo=npm" /></a>
