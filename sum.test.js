@@ -7,7 +7,7 @@ test('Mesh', () => {
   expect(new lib.Mesh([1, 1, 1], [1, 1, 1], [1, 1, 1])).toEqual({'points': [1, 1, 1], 'edges': [1, 1, 1], 'faces': [1, 1, 1]});
 });
 test('Item', () => {
-  expect(new lib.Item('cube', [1, 1, 1], [0, 0, 0])).toEqual({'mesh': 'cube', 'pos': [1, 1, 1], 'rot': [0, 0, 0]});
+  expect(new lib.GameObject('cube', [1, 1, 1], [0, 0, 0])).toEqual({'mesh': 'cube', 'pos': [1, 1, 1], 'rot': [0, 0, 0]});
 });
 test('Viewport', () => {
   expect(new lib.Viewport(100, 100)).toEqual({'width': 100, 'height': 100});
