@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-While publishing this security report all published releases are supported, however I may have forgotten to update this file.
+At the time of publishing this security policy all published releases are supported, however I may have forgotten to update this file.
 
 | Version | Supported          |
 | ------- | ------------------ |
