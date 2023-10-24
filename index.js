@@ -16,9 +16,9 @@ exports.repeatStringNumTimes = function repeatStringNumTimes(string, times) {
 /**
  * A class for generating a mesh
  *
- * @param {Array<Array<number>>} points - A list of all the points
- * @param {Array<Array<number>>} edges - A list of all the edges
- * @param {Array<Array<number>>} faces - A list of all the faces
+ * @property {Array<Array<number>>} points - A list of all the points
+ * @property {Array<Array<number>>} edges - A list of all the edges
+ * @property {Array<Array<number>>} faces - A list of all the faces
  */
 exports.Mesh = class Mesh {
   constructor(points, edges, faces) {
@@ -27,6 +27,11 @@ exports.Mesh = class Mesh {
     this.faces = faces;
   }
 };
+/**
+ * A class for any kind of gameobject
+ *
+ *
+ */
 exports.GameObject = class GameObject {
   constructor(mesh, pos, rot) {
     this.mesh = mesh;
