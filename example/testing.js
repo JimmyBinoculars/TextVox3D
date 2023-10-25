@@ -52,14 +52,29 @@ while (castAngle<=fov) {
   // Convert the angle to a gradient for y=mx+c
   const castTang = Math.tan(castAngle*(Math.PI/180));
   // Anti ESLint
-  objects;
   maxDistance;
   objects;
   castTang;
   y;
   isPointInPolygon();
-  for (a=0; a<objects.length; i++) {
-
+  for (a=0; a<objects.length; a++) {
+    let lowestPoint = 0;
+    let secondLowestPoint = 0;
+    for (b=-1; b<objects[a].length; b++) {
+      if ((objects[a][b][0] + objects[a][b][1]) <
+      (objects[a][lowestPoint][0] + objects[a][lowestPoint][1])) {
+        lowestPoint = b;
+      } else {
+        // Check if its equal to the current biggest object or
+        //
+        if ((objects[a][b][0] + objects[a][b][1]) ==
+        (objects[a][lowestPoint][0] + objects[a][lowestPoint][1]) ||
+        (objects[a][b][0] + objects[a][b][1]) <
+        (objects[a][secondLowestPoint][0] + objects[a][secondLowestPoint][1])) {
+          secondLowestPoint = b;
+        }
+      }
+    }
   }
   // Reset y
   y=0;
