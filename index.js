@@ -41,23 +41,29 @@ exports.Mesh = class Mesh {
  * A class for any kind of gameobject
  *
  * @class
- * @property {number} mesh - A container for the asscociated mesh
+ * @property {Mesh} mesh - A container for the asscociated mesh
+ * @property {Array<number>} pos - The position of the object
+ * @property {Array<number>} rot - The rotation of the object
  */
 exports.GameObject = class GameObject {
   /**
    * A constructor for making GameObjects
    *
-   * @param {number} mesh - A container for the associated mesh
+   * @param {Mesh} mesh - A container for the associated mesh
    * @param {Array<number>} pos - The position of the object
    * @param {Array<number>} rot - The rotation of the object
    */
-
   constructor(mesh, pos, rot) {
     this.mesh = mesh;
     this.pos = pos;
     this.rot = rot;
   }
 };
+/**
+ * A class for the camera type
+ *
+ * @property {number} fov - A property for the fov vaible (in degrees)
+ */
 exports.Camera = class Camera {
   constructor(fov, samples, pos, rot) {
     this.fov = fov;
@@ -66,7 +72,20 @@ exports.Camera = class Camera {
     this.rot = rot;
   }
 };
+/**
+ * A class for the viewport object
+ *
+ * @class
+ * @property {number} width - A container for the width variable
+ * @property {number} height - A container for the height variable
+ */
 exports.Viewport = class Viewport {
+  /**
+   * A constructor for making Viewports
+   *
+   * @param {number} width - A container for the width variable
+   * @param {number} height - A container for the height variable
+   */
   constructor(width, height) {
     this.width = width;
     this.height = height;
@@ -75,7 +94,12 @@ exports.Viewport = class Viewport {
 exports.GetMesh = function getMesh(meshName) {
   switch (meshName) {
     case 'cube':
-      return {'points': [[1, 1, 1], [-1, 1, 1], [-1, -1, 1], [1, -1, 1], [1, -1, -1], [1, 1, -1], [-1, -1, -1], [-1, 1, -1]], 'edges': [[0, 1], [0, 5], [0, 3], [1, 2], [1, 7], [2, 3], [2, 6], [3, 4], [4, 5], [4, 6], [5, 7], [7, 6]], 'faces': [[1, 3, 5, 2], [2, 8, 3, 7], [7, 5, 9, 6], [0, 4, 1, 10], [3, 4, 6, 11]]};
+      return {'points': [[1, 1, 1], [-1, 1, 1], [-1, -1, 1],
+        [1, -1, 1], [1, -1, -1], [1, 1, -1], [-1, -1, -1], [-1, 1, -1]],
+      'edges': [[0, 1], [0, 5], [0, 3], [1, 2], [1, 7], [2, 3],
+        [2, 6], [3, 4], [4, 5], [4, 6], [5, 7], [7, 6]],
+      'faces': [[1, 3, 5, 2], [2, 8, 3, 7], 
+        [7, 5, 9, 6], [0, 4, 1, 10], [3, 4, 6, 11]]};
   }
 };
 
