@@ -7,10 +7,20 @@ let tangent = Math.tan(radians);
 console.log(`tan: ${tangent}`);
 console.log(`calc: y=${tangent}x`);
 */
-
+/**
+ * A function for checking if a point is in a polygon
+ *
+ * @param {number} x - The x of the point
+ * @param {number} y - The y of the point
+ * @param {Array<Array<number>>} polygon - The polygon we will check for the
+ * point
+ * @return {boolean} - Returns whether the point is inside the given polygon
+ */
 function isPointInPolygon(x, y, polygon) {
-  // I know this only works for the square but if you are working on issue ticket #2 do not try to fix this unless it is what is causing the issue
-  if (x >= polygon[0][0] && x <= polygon[1][0] && y >= polygon[0][1] && y <= polygon[2][1]) {
+  // I know this only works for the square but if you are working on issue
+  // ticket #2 do not try to fix this unless it is what is causing the issue
+  if (x >= polygon[0][0] && x <= polygon[1][0] &&
+     y >= polygon[0][1] && y <= polygon[2][1]) {
     return true;
   } else {
     return false;
@@ -25,7 +35,8 @@ let y = 0;
 // Max distance is set to low so it does not fill up the command prompt
 const maxDistance = 10;
 // Gets the dimentions of the viewport
-const viewport = {'height': process.stdout.rows-1, 'width': process.stdout.columns};
+const viewport = {'height': process.stdout.rows-1,
+  'width': process.stdout.columns};
 console.log(viewport);
 let castAngle = 0;
 // The current column that we are on
@@ -59,7 +70,8 @@ while (castAngle<=degrees) {
 // Initialise the output variable
 let output = '';
 for (i=0; i<=(viewport.width-1); i++) {
-  // Check if the current column is listed in the columns that have hit an object
+  // Check if the current column is listed in the columns that have hit an
+  // object
   if (columnHits.includes(i)) {
     output += '#';
   } else {
