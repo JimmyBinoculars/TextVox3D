@@ -18,12 +18,15 @@ function calibrateViewportDimensions(camera, d, cubeSize) {
 
 const f = 0;
 const camera = new lib.Camera(55, 10, [7, -7, 5], [64, 0, 47]);
-const viewport = new lib.Viewport(process.stdout.columns, process.stdout.rows - 1);
+const viewport = new lib.Viewport(process.stdout.columns,
+    process.stdout.rows - 1);
 
-const cubeMesh = lib.GetMesh('cube');
+const cubeMesh = lib.getMesh('cube');
 const cube = new lib.GameObject(cubeMesh, [0, 0, 0], [0, 0, 0], [2, 2, 2]);
 
-
+// Anti - JSLint
+cube;
+camera;
 /**
  * Function to test the viewport.
  */

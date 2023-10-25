@@ -93,7 +93,7 @@ exports.Viewport = class Viewport {
     this.height = height;
   }
 };
-exports.GetMesh = function getMesh(meshName) {
+exports.getMesh = function getMesh(meshName) {
   switch (meshName) {
     case 'cube':
       return {'points': [[1, 1, 1], [-1, 1, 1], [-1, -1, 1],
