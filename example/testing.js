@@ -60,21 +60,25 @@ while (castAngle<=fov) {
   for (a=0; a<objects.length; a++) {
     let lowestPoint = 0;
     let secondLowestPoint = 0;
+    // Get the two lowest points to make the lowest line
     for (b=-1; b<objects[a].length; b++) {
       if ((objects[a][b][0] + objects[a][b][1]) <
       (objects[a][lowestPoint][0] + objects[a][lowestPoint][1])) {
+        // Set the lowest point to the current point
         lowestPoint = b;
       } else {
         // Check if its equal to the current biggest object or
-        //
+        // smaller than the current 2nd smallest
         if ((objects[a][b][0] + objects[a][b][1]) ==
         (objects[a][lowestPoint][0] + objects[a][lowestPoint][1]) ||
         (objects[a][b][0] + objects[a][b][1]) <
         (objects[a][secondLowestPoint][0] + objects[a][secondLowestPoint][1])) {
+          // Set the second lowest point to the current point
           secondLowestPoint = b;
         }
       }
     }
+    let line = {"m":(secondLowestPoint-lowestPoint), "c":()}
   }
   // Reset y
   y=0;
