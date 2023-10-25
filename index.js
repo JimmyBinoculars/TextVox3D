@@ -62,11 +62,21 @@ exports.GameObject = class GameObject {
 /**
  * A class for the camera type
  *
- * @property {number} fov - A property for the fov varible (in degrees)
+ * @class
+ * @property {number} fov - A property for the field of view (in degrees)
  * @property {number} samples - A property for the samples variable
- * @property {Array<number>} pos - A property for the positions variable
+ * @property {Array<number>} pos - A property for the position variable
+ * @property {Array<number>} rot - A property for the rotation variable
  */
 exports.Camera = class Camera {
+  /**
+   * A constructor for making cameras
+   *
+   * @param {number} fov - A property for field of view (in degrees)
+   * @param {number} samples - A property for the samples variable
+   * @param {Array<number>} pos - A property for the position variable
+   * @param {Array<number>} rot - A property for the rotation variable
+   */
   constructor(fov, samples, pos, rot) {
     this.fov = fov;
     this.samples = samples;
@@ -100,7 +110,7 @@ exports.getMesh = function getMesh(meshName) {
         [1, -1, 1], [1, -1, -1], [1, 1, -1], [-1, -1, -1], [-1, 1, -1]],
       'edges': [[0, 1], [0, 5], [0, 3], [1, 2], [1, 7], [2, 3],
         [2, 6], [3, 4], [4, 5], [4, 6], [5, 7], [7, 6]],
-      'faces': [[1, 3, 5, 2], [2, 8, 3, 7], 
+      'faces': [[1, 3, 5, 2], [2, 8, 3, 7],
         [7, 5, 9, 6], [0, 4, 1, 10], [3, 4, 6, 11]]};
   }
 };

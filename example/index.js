@@ -27,6 +27,8 @@ const cube = new lib.GameObject(cubeMesh, [0, 0, 0], [0, 0, 0], [2, 2, 2]);
 // Anti - JSLint
 cube;
 camera;
+calibrateViewportDimensions(camera, 10, 100);
+
 /**
  * Function to test the viewport.
  */
@@ -34,7 +36,8 @@ function viewportTest() {
   let i = 0;
   while (i < viewport.height) {
     if (i === 0) {
-      const a = lib.repeatStringNumTimes('0', (viewport.width - (f.toString().length + 2)));
+      const a = lib.repeatStringNumTimes('0',
+          (viewport.width - (f.toString().length + 2)));
       console.log(`${a}f=${f}`);
     } else {
       console.log('0');
