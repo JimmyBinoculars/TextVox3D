@@ -17,14 +17,12 @@ function calibrateViewportDimensions(camera, d, cubeSize) {
 }
 
 const f = 0;
-const camera = new lib.camera(55, 10, [7, -7, 5], [64, 0, 47]);
-const viewport = new lib.viewport(process.stdout.columns, process.stdout.rows - 1);
+const camera = new lib.Camera(55, 10, [7, -7, 5], [64, 0, 47]);
+const viewport = new lib.Viewport(process.stdout.columns, process.stdout.rows - 1);
 
-const cubeMesh = lib.getMesh('cube');
-const cube = new lib.item(cubeMesh, [0, 0, 0]/* pos */, [0, 0, 0]/* rot */, [2, 2, 2]/* scale */);
-// console.log(`Cube mesh: points: ${cubeMesh.points}, edges: ${cubeMesh.edges}`);
+const cubeMesh = lib.GetMesh('cube');
+const cube = new lib.GameObject(cubeMesh, [0, 0, 0], [0, 0, 0], [2, 2, 2]);
 
-// console.log(`Columns: ${process.stdout.columns}, Rows: ${process.stdout.rows}`);
 
 /**
  * Function to test the viewport.
