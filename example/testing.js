@@ -42,25 +42,25 @@ let castAngle = 0;
 // The current column that we are on
 let column = 0;
 // Columns where we have hit an object
-let columnHits = [];
-while (castAngle<=degrees) {
+const columnHits = [];
+
+const objects = [square];
+
+while (castAngle<=fov) {
   // Calculate the exact angle that we need to cast at
   castAngle = ((viewport.width/(fov*2))*column)-70;
   // Convert the angle to a gradient for y=mx+c
   const castTang = Math.tan(castAngle*(Math.PI/180));
-  while (y<maxDistance) {
-    // Move the cursor for the raycast away from the camera
-    y += 0.01;
-    // Calculate x using y=mx+c(ish), Maybe I've got this wrong?
-    const x = castTang*y;
-    // Test if the current "raycast cursor" is inside/on the edge of an object
-    if (isPointInPolygon(x, y, square)) {
-      // Exit the loop (the 1000 is for assurance)
-      y=maxDistance+1000;
-      // Add the current column to the list of columns that have hit an object
-      columnHits += column;
-    }
-  };
+  // Anti ESLint
+  objects;
+  maxDistance;
+  objects;
+  castTang;
+  y;
+  isPointInPolygon();
+  for (a=0; a<objects.length; i++) {
+
+  }
   // Reset y
   y=0;
   // Move to the next column
