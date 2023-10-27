@@ -78,7 +78,7 @@ while (castAngle<=fov) {
         }
       }
     }
-    let line = {"m":(secondLowestPoint-lowestPoint), "c":()}
+    let line = {"m":(secondLowestPoint-lowestPoint), "c":(-((secondLowestPoint-lowestPoint)*objects[lowestPoint][0]-objects[lowestPoint][1])}
   }
   // Reset y
   y=0;
