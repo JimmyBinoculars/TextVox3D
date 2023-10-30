@@ -1,6 +1,6 @@
 <div align="center">
     <p>
-        <img alt="Logo" src="./data/logo.png" />
+        <img alt="Logo" src="./data/TextVox3D.png" />
     </p>
     <code>npm i textvox3d</code>
     <br />
