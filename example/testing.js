@@ -29,8 +29,8 @@ function isPointInPolygon(x, y, polygon) {
 
 // The field of view of the viewport (in degrees)
 const fov = 70;
-// Square is formatted like this [[point], [point]]
-const square = [[-0.25, 4], [0.25, 4], [-0.25, 6], [0.25, 6]];
+// Square is formatted like this [[pointx], [pointy]]
+const square = [[-0.25, 4], [0.25, 4], [0.25, 6], [-0.25, 6]];
 let y = 0;
 // Max distance is set to low so it does not fill up the command prompt
 const maxDistance = 10;
@@ -48,7 +48,7 @@ const objects = [square];
 
 while (castAngle<=fov) {
   // Calculate the exact angle that we need to cast at
-  castAngle = ((viewport.width/(fov*2))*column)-70;
+  castAngle = ((fov / viewport.width) * column - fov / 2);
   // Convert the angle to a gradient for y=mx+c
   const castTang = Math.tan(castAngle*(Math.PI/180));
   // Anti ESLint
@@ -78,7 +78,8 @@ while (castAngle<=fov) {
         }
       }
     }
-    let line = {"m":(secondLowestPoint-lowestPoint), "c":()}
+    let line = {'m': secondLowestPoint-lowestPoint, 'c': 'aaa'};
+    line;
   }
   // Reset y
   y=0;
