@@ -2,7 +2,7 @@ const lib = require('./index');
 
 test('Camera', () => {
   expect(new lib.Camera(55, 10, [7, -7, 5], [64, 0, 47]))
-      .toEqual({'fl': 70, 'samples': 10,
+      .toEqual({'fl': 55,'fov': 3.0555555555555554, 'samples': 10,
         'pos': [7, -7, 5], 'rot': [64, 0, 47]});
 });
 test('Mesh', () => {
