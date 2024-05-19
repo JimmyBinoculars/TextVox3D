@@ -8,7 +8,7 @@ const viewport = new lib.Viewport(
 );
 
 const squareMesh = lib.getMesh("square");
-const square = new lib.GameObject(cubeMesh, [0, 0, 0], [0, 0, 0], [2, 2, 2]);
+const square = new lib.GameObject(squareMesh, [0, 0, 0], [0, 0, 0], [0, 0, 0]);
 
 // We will do just horizontal first
 console.log(`The camera fov is :${camera.fov}`);

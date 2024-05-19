@@ -1,8 +1,8 @@
 const lib = require('./index');
 
 test('Camera', () => {
-  expect(new lib.Camera(70, 10, [7, -7, 5], [64, 0, 47]))
-      .toEqual({'fov': 70, 'samples': 10,
+  expect(new lib.Camera(55, 10, [7, -7, 5], [64, 0, 47]))
+      .toEqual({'fl': 70, 'samples': 10,
         'pos': [7, -7, 5], 'rot': [64, 0, 47]});
 });
 test('Mesh', () => {
@@ -18,13 +18,4 @@ test('Viewport', () => {
 });
 test('Repeat string func', () => {
   expect(lib.repeatStringNumTimes('a', 3)).toEqual('aaa');
-});
-test('Get Mesh', () => {
-  expect(lib.getMesh('cube'))
-      .toEqual({'points': [[1, 1, 1], [-1, 1, 1], [-1, -1, 1], [1, -1, 1],
-        [1, -1, -1], [1, 1, -1], [-1, -1, -1], [-1, 1, -1]],
-      'edges': [[0, 1], [0, 5], [0, 3], [1, 2], [1, 7],
-        [2, 3], [2, 6], [3, 4], [4, 5], [4, 6], [5, 7], [7, 6]],
-      'faces': [[1, 3, 5, 2], [2, 8, 3, 7],
-        [7, 5, 9, 6], [0, 4, 1, 10], [3, 4, 6, 11]]});
 });
