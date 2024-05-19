@@ -6,7 +6,7 @@
  * @return {string} - Returns the string repeated n times
  */
 exports.repeatStringNumTimes = function repeatStringNumTimes(string, times) {
-  let repeatedString = '';
+  let repeatedString = "";
   while (times > 0) {
     repeatedString += string;
     times--;
@@ -62,7 +62,7 @@ exports.GameObject = class GameObject {
 /**
  * A class for the camera type
  *
- * @class
+ * @constructor
  * @property {number} fov - A property for the field of view (in degrees)
  * @property {number} samples - A property for the samples variable
  * @property {Array<number>} pos - A property for the position variable
@@ -105,13 +105,40 @@ exports.Viewport = class Viewport {
 };
 exports.getMesh = function getMesh(meshName) {
   switch (meshName) {
-    case 'cube':
-      return {'points': [[1, 1, 1], [-1, 1, 1], [-1, -1, 1],
-        [1, -1, 1], [1, -1, -1], [1, 1, -1], [-1, -1, -1], [-1, 1, -1]],
-      'edges': [[0, 1], [0, 5], [0, 3], [1, 2], [1, 7], [2, 3],
-        [2, 6], [3, 4], [4, 5], [4, 6], [5, 7], [7, 6]],
-      'faces': [[1, 3, 5, 2], [2, 8, 3, 7],
-        [7, 5, 9, 6], [0, 4, 1, 10], [3, 4, 6, 11]]};
+    case "cube":
+      return {
+        points: [
+          [1, 1, 1],
+          [-1, 1, 1],
+          [-1, -1, 1],
+          [1, -1, 1],
+          [1, -1, -1],
+          [1, 1, -1],
+          [-1, -1, -1],
+          [-1, 1, -1],
+        ],
+        edges: [
+          [0, 1],
+          [0, 5],
+          [0, 3],
+          [1, 2],
+          [1, 7],
+          [2, 3],
+          [2, 6],
+          [3, 4],
+          [4, 5],
+          [4, 6],
+          [5, 7],
+          [7, 6],
+        ],
+        faces: [
+          [1, 3, 5, 2],
+          [2, 8, 3, 7],
+          [7, 5, 9, 6],
+          [0, 4, 1, 10],
+          [3, 4, 6, 11],
+        ],
+      };
   }
 };
 
