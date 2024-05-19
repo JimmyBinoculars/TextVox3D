@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "textvox3d": "^1.0.0"
+    "textvox3d": "^1.0.0-alpha"
   }
 }

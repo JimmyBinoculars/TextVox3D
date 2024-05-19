@@ -19,6 +19,7 @@
 
 ## About
 A JavaScript 3D renderer for rendering to text outputted to a command prompt or terminal.
+The graphing calculations written [here](https://www.desmos.com/calculator/tzm4pnnswx).
 
 ## Contributing
 As the project is in such an early stage, currently I will not be accepting contribution apart from on issued marked "help wanted"

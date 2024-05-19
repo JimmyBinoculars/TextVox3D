@@ -79,7 +79,7 @@ exports.Camera = class Camera {
    */
   constructor(fl, samples, pos, rot) {
     this.fl = fl;
-    this.fov = (1/18)*fl
+    this.fov = (1 / 18) * fl;
     this.samples = samples;
     this.pos = pos;
     this.rot = rot;
@@ -104,6 +104,12 @@ exports.Viewport = class Viewport {
     this.height = height;
   }
 };
+/**
+ * A function for getting preset objects
+ *
+ * @param {string} meshName - The name of the mesh you want to get
+ * @returns {this.Mesh}
+ */
 exports.getMesh = function getMesh(meshName) {
   switch (meshName) {
     case "cube":
@@ -140,6 +146,9 @@ exports.getMesh = function getMesh(meshName) {
           [3, 4, 6, 11],
         ],
       };
+    case "square":
+      mesh = new this.Mesh([[0, 0], [2, 0], [2, 2], [0, 2]], [[0, 1], [1, 2], [0, 3], [2, 3]], [[0, 1, 2, 3]])
+      return mesh
   }
 };
 
