@@ -24,7 +24,7 @@ const viewport = new lib.viewport(
 );
 
 const cubeMesh = lib.getMesh("cube");
-const cube = new lib.GameObject(cubeMesh, [0, 0, 0], [0, 0, 0], [2, 2, 2]);
+const cube = new lib.gameobject(cubeMesh, [0, 0, 0], [0, 0, 0], [2, 2, 2]);
 
 // Anti - JSLint
 cube;

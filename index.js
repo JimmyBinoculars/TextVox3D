@@ -62,7 +62,7 @@ exports.GameObject = class GameObject {
 /**
  * A class for the camera type
  *
- * @constructor
+ * @class
  * @property {number} fov - A property for the field of view (in degrees)
  * @property {number} samples - A property for the samples variable
  * @property {Array<number>} pos - A property for the position variable
