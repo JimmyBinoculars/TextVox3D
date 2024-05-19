@@ -72,13 +72,14 @@ exports.Camera = class Camera {
   /**
    * A constructor for making cameras
    *
-   * @param {number} fov - A property for field of view (in degrees)
+   * @param {number} fl - A property for focal length (in degrees)
    * @param {number} samples - A property for the samples variable
    * @param {Array<number>} pos - A property for the position variable
    * @param {Array<number>} rot - A property for the rotation variable
    */
-  constructor(fov, samples, pos, rot) {
-    this.fov = fov;
+  constructor(fl, samples, pos, rot) {
+    this.fl = fl;
+    this.fov = (1/18)*fl
     this.samples = samples;
     this.pos = pos;
     this.rot = rot;
