@@ -151,7 +151,12 @@ exports.getMesh = function getMesh(meshName) {
       return mesh
   }
 };
-
-exports.raycast = function raycast(camera, viewport, items) {
+/**
+ * A function for rendering the scene once
+ * @param {this.Camera} camera
+ * @param {this.Viewport} viewport
+ * @param {List<this.GameObject>} items
+ */
+exports.render = function render(camera, viewport, items) {
   return;
 };
